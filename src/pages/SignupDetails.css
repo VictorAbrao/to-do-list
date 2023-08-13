@@ -1,0 +1,15 @@
+.registration {
+  background: #c1c1c1;
+  display: flex;
+  max-width: 600px;
+  margin: auto;
+  border-radius: 15px;
+  padding: 12px;
+  background: #e0e0e0;
+  margin-top: 10px;
+}
+
+.btn-submit {
+  margin: auto;
+  display: flex;
+}
