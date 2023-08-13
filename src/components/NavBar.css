@@ -1,0 +1,13 @@
+.navbar-nav.ml-auto {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.btn-logout {
+  margin-left: 20px;
+  background: none;
+  color: black;
+}
+

@@ -3,7 +3,7 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getFirestore, getDoc, doc, setDoc } from "firebase/firestore";
-
+import './Login.css'
 const firebaseConfig = {
   apiKey: "AIzaSyDrB5Cj-3EI8kwbcu6H8ihOeS84OXok1LY",
   authDomain: "to-do-list-va.firebaseapp.com",

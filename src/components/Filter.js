@@ -1,15 +1,68 @@
-import React from 'react';
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function Filter({ onFilterChange }) {
+function Filter({ onFilterChange, users }) {
   return (
-    <div>
-      <label htmlFor="filter">Filter tasks:</label>
-      <select id="filter" onChange={e => onFilterChange(e.target.value)}>
-        <option value="all">All</option>
-        <option value="completed">Completed</option>
-        <option value="incomplete">Incomplete</option>
-        {/* Adicionar mais opções conforme necessário */}
-      </select>
+    <div className="container my-3">
+      <form className="row">
+        <div className="col form-group">
+          <label htmlFor="description" className="mr-1">
+            Description:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="description"
+            onChange={(e) => onFilterChange("description", e.target.value)}
+          />
+        </div>
+        <div className="col form-group">
+          <label htmlFor="responsible" className="mr-1">
+            Responsible:
+          </label>
+          <select
+            className="form-control"
+            id="google_id"
+            onChange={(e) => onFilterChange("google_id", e.target.value)}
+          >
+            <option value="">All</option>
+            {users.map((user) => (
+              <option key={user.google_id} value={user.google_id}>
+                {user.first_name + " " + user.last_name}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="col form-group">
+          <label htmlFor="date" className="mr-1">
+            Date:
+          </label>
+          <input
+            type="date"
+            className="form-control"
+            id="date"
+            onChange={(e) => onFilterChange("date", e.target.value)}
+          />
+        </div>
+        <div className="col form-group">
+          <label htmlFor="state" className="mr-1">
+            State:
+          </label>
+          <select
+            className="form-control"
+            id="state"
+            onChange={(e) => onFilterChange("state", e.target.value)}
+          >
+            <option value="">All</option>
+            <option value="to do">To do</option>
+            <option value="in progress">In Progress</option>
+            <option value="done">Done</option>
+            {/* Adicione outros estados conforme necessário */}
+          </select>
+        </div>
+        {/* Adicione outros campos de acordo com seus critérios */}
+        {/* ... */}
+      </form>
     </div>
   );
 }

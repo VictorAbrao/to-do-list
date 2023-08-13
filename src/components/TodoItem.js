@@ -6,6 +6,7 @@ import {
   faArrowRight,
   faArrowLeft,
   faUnlock,
+  faPen,
 } from "@fortawesome/free-solid-svg-icons"; // Importando o ícone da seta para esquerda
 import "./TodoItem.css";
 
@@ -17,6 +18,7 @@ function TodoItem({
   onDelete,
   onUpdateState,
   onRevertState,
+  onEdit,
 }) {
   // Adicionando uma nova prop onRevertState
   return (
@@ -69,6 +71,13 @@ function TodoItem({
                   <FontAwesomeIcon className="iconAction" icon={faUnlock} />
                 </button>
               )}
+              <button
+                type="button"
+                className="btn btn-success mr-2"
+                onClick={() => onEdit(todo)} // Adicione essa linha
+              >
+                <FontAwesomeIcon className="iconAction" icon={faPen} />
+              </button>
               <button
                 type="button"
                 className="btn btn-danger mr-2"

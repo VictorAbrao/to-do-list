@@ -1,0 +1,23 @@
+
+.listUsersOnline, .listUsersOffline > li{
+    list-style: none;
+}
+
+.iconOnline, .iconOffline{
+    font-size: 8px;
+}
+
+.iconOnline{
+    color:#33CC33;
+}
+
+.iconOffline{
+    color:#FF0000;
+}
+
+.userList{
+    background: #e5e5e5;
+    padding: 20px;
+    margin: 20px 0px 20px 0px;
+    border-radius: 15px;
+}
