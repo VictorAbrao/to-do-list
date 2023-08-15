@@ -21,6 +21,7 @@ function Filter({ onFilterChange, users }) {
             Responsible:
           </label>
           <select
+            data-testid="responsible-select"
             className="form-control"
             id="google_id"
             onChange={(e) => onFilterChange("google_id", e.target.value)}
