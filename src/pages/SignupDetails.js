@@ -29,7 +29,7 @@ function SignupDetails() {
       const userRef = doc(db, "users", user.uid);
 
       await setDoc(userRef, {
-        google_id: user.uid, // Salvando o ID do Google
+        google_id: user.uid,
         first_name: firstName,
         last_name: lastName,
         online: true,

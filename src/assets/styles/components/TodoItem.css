@@ -1,9 +1,9 @@
 .divActions .btn {
-  margin-right: 10px; /* Ajuste o valor conforme o espaço desejado */
+  margin-right: 10px;
 }
 
 .divActions {
-  width: 207px;
+  min-width: 255px;
 }
 
 .iconAction {

@@ -23,7 +23,7 @@ function Home() {
     handleBeforeUnload,
     updateUserStatus,
   } = useFirestoreTodos(user);
-  const [filters, setFilters] = useState({}); // Mantenha o estado dos filtros
+  const [filters, setFilters] = useState({});
 
   const handleFilterChange = (key, value) => {
     setFilters({ ...filters, [key]: value });
@@ -31,7 +31,7 @@ function Home() {
   };
 
   const handleEditTodo = (todoCode) => {
-    const todoToEdit = todos.find((todo) => todo.id === todoCode); // Substitua "id" pelo campo correto, se necessário
+    const todoToEdit = todos.find((todo) => todo.id === todoCode);
     if (todoToEdit) {
       setEditing(true);
       setTodoToEdit(todoToEdit);
@@ -65,7 +65,7 @@ function Home() {
   }, [user]);
 
   const handleSignOut = async () => {
-    await updateUserStatus(user, false); // Atualizar o status do usuário para offline
+    await updateUserStatus(user, false);
     signOut(auth).then(() => {
       window.location.href = "/login";
     });
@@ -86,8 +86,8 @@ function Home() {
         onlineUsers={onlineUsers}
         offlineUsers={offlineUsers}
         user={user}
-        editing={editing} // Adicionando a propriedade 'editing'
-        todoToEdit={todoToEdit} // Adicionando a propriedade 'todoToEdit'
+        editing={editing}
+        todoToEdit={todoToEdit}
       />
       <button onClick={handleAddTodo} className="btn btn-primary add-todo-btn">
         <FontAwesomeIcon icon={faPlus} />

@@ -20,24 +20,18 @@
 }
 
 ::-webkit-scrollbar {
-  width: 10px; /* Largura da barra de rolagem */
+  width: 10px;
 }
 
-/* Estilo da faixa onde a barra de rolagem se move */
 ::-webkit-scrollbar-track {
   height: 8px;
 }
 
-/* Estilo da barra de rolagem em si */
 ::-webkit-scrollbar-thumb {
-   background: rgba(0, 0, 0, 0.5); /* Cor da barra */
-    border-radius: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
 }
 
-/* Efeito hover na barra de rolagem */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.1);/* Cor da barra de rolagem quando o mouse estiver sobre ela */
+  background: rgba(0, 0, 0, 0.1);
 }
-
-
-

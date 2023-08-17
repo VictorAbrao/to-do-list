@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import Filter from "../../components/Filter";
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 describe("Filter", () => {
   const users = [
     { google_id: "123", first_name: "John", last_name: "Doe" },
@@ -34,5 +34,4 @@ describe("Filter", () => {
       "test description"
     );
   });
-
 });

@@ -1,20 +1,20 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import TodoItem from '../../components/TodoItem';
-import '@testing-library/jest-dom/extend-expect';
+import React from "react";
+import { render } from "@testing-library/react";
+import TodoItem from "../../components/TodoItem";
+import "@testing-library/jest-dom/extend-expect";
 
-test('renders TodoItem correctly', () => {
+test("renders TodoItem correctly", () => {
   const todo = {
-    text: 'Test todo',
-    date: '2023-08-13',
-    responsibleName: 'Alice',
-    lastChangedByName: 'Bob',
+    text: "Test todo",
+    date: "2023-08-13",
+    responsibleName: "Alice",
+    lastChangedByName: "Bob",
     locked: false,
-    state: 'in progress',
-    google_id: '1234'
+    state: "in progress",
+    google_id: "1234",
   };
 
-  const loggedInGoogleId = '1234';
+  const loggedInGoogleId = "1234";
 
   const TestTable = ({ children }) => (
     <table>
@@ -41,6 +41,6 @@ test('renders TodoItem correctly', () => {
   expect(getByText(todo.date)).toBeInTheDocument();
   expect(getByText(todo.responsibleName)).toBeInTheDocument();
   expect(getByText(todo.lastChangedByName)).toBeInTheDocument();
-  expect(getByText('No')).toBeInTheDocument();
+  expect(getByText("No")).toBeInTheDocument();
   expect(getByText(todo.state)).toBeInTheDocument();
 });

@@ -1,8 +1,7 @@
 import React from "react";
 import { render, fireEvent, screen } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
-import AddTodoModal from '../../components//AddTodoModal'; 
-
+import AddTodoModal from "../../components//AddTodoModal";
 
 jest.mock("../../hooks/useFirestoreTodos.js", () => ({
   useFirestoreTodos: () => ({
@@ -34,5 +33,4 @@ describe("AddTodoModal", () => {
     });
     expect(screen.getByPlaceholderText("Description").value).toBe("New To Do");
   });
-
 });

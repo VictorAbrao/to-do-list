@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import TodoTable from "../../components/TodoTable";
 import TodoItem from "../../components/TodoItem";
-import '@testing-library/jest-dom/extend-expect';
+import "@testing-library/jest-dom/extend-expect";
 import * as customHooks from "../../hooks/useFirestoreTodos";
 jest.mock("../../hooks/useFirestoreTodos");
 

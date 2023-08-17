@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import '../assets/styles/components/Filter.css'
+import "../assets/styles/components/Filter.css";
 
 function Filter({ onFilterChange, users }) {
   return (
@@ -59,11 +59,8 @@ function Filter({ onFilterChange, users }) {
             <option value="to do">To do</option>
             <option value="in progress">In Progress</option>
             <option value="done">Done</option>
-            {/* Adicione outros estados conforme necessário */}
           </select>
         </div>
-        {/* Adicione outros campos de acordo com seus critérios */}
-        {/* ... */}
       </form>
     </div>
   );

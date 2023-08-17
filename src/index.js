@@ -1,15 +1,17 @@
 const originalWarn = console.warn.bind(console.warn);
 console.warn = (msg) => {
-  if (msg.indexOf('ReactDOM.render is no longer supported in React 18') === -1) {
+  if (
+    msg.indexOf("ReactDOM.render is no longer supported in React 18") === -1
+  ) {
     originalWarn(msg);
   }
 };
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
 
-const root = document.getElementById('root');
+const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
   <React.StrictMode>

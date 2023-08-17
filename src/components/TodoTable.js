@@ -1,7 +1,7 @@
 import React from "react";
 import TodoItem from "./TodoItem";
 import { useFirestoreTodos } from "../hooks/useFirestoreTodos";
-import '../assets/styles/components/TodoTable.css'
+import "../assets/styles/components/TodoTable.css";
 
 const TodoTable = ({ user, onEdit, filters }) => {
   const { todos, deleteTodo, updateState, revertState, unlockTodo, lockTodo } =
@@ -11,7 +11,6 @@ const TodoTable = ({ user, onEdit, filters }) => {
     return (
       (!filters.description || todo.text.includes(filters.description)) &&
       (!filters.date || todo.date === filters.date) &&
-      // Adicione outras condições de filtragem conforme necessário
       (!filters.state || todo.state === filters.state) &&
       (!filters.google_id || todo.google_id === filters.google_id)
     );
