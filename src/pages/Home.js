@@ -6,19 +6,28 @@ import UserList from "../components/UserList";
 import AddTodoModal from "../components/AddTodoModal";
 import TodoTable from "../components/TodoTable";
 import Filter from "../components/Filter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import "../assets/styles/pages/Home.css";
+
 function Home() {
   const [user, setUser] = useState(null);
   const auth = getAuth();
   const [showModal, setShowModal] = useState(false);
   const [editing, setEditing] = useState(false);
   const [todoToEdit, setTodoToEdit] = useState(null);
-  const { todos, onlineUsers, offlineUsers, handleBeforeUnload, updateUserStatus } =
-    useFirestoreTodos(user);
+  const {
+    todos,
+    onlineUsers,
+    offlineUsers,
+    handleBeforeUnload,
+    updateUserStatus,
+  } = useFirestoreTodos(user);
   const [filters, setFilters] = useState({}); // Mantenha o estado dos filtros
 
   const handleFilterChange = (key, value) => {
     setFilters({ ...filters, [key]: value });
-console.log('filters', filters)
+    console.log("filters", filters);
   };
 
   const handleEditTodo = (todoCode) => {
@@ -29,7 +38,7 @@ console.log('filters', filters)
       console.log("todo alterado", todoToEdit);
       setShowModal(true);
     } else {
-      console.error(`Todo com o código ${todoCode} não encontrado`);
+      console.error(`To Do com o código ${todoCode} não encontrado`);
     }
   };
 
@@ -66,6 +75,11 @@ console.log('filters', filters)
     <div className="container">
       <Navbar user={user} handleSignOut={handleSignOut} />
       <UserList onlineUsers={onlineUsers} offlineUsers={offlineUsers} />
+      <br></br>
+      <center>
+        <h1>To do List</h1>
+      </center>
+
       <AddTodoModal
         show={showModal}
         handleClose={() => setShowModal(false)}
@@ -75,10 +89,14 @@ console.log('filters', filters)
         editing={editing} // Adicionando a propriedade 'editing'
         todoToEdit={todoToEdit} // Adicionando a propriedade 'todoToEdit'
       />
-      <button onClick={handleAddTodo} className="btn btn-primary">
-        Add To Do
+      <button onClick={handleAddTodo} className="btn btn-primary add-todo-btn">
+        <FontAwesomeIcon icon={faPlus} />
       </button>
-    <Filter users={[...onlineUsers, ...offlineUsers]}  onFilterChange={handleFilterChange} />
+
+      <Filter
+        users={[...onlineUsers, ...offlineUsers]}
+        onFilterChange={handleFilterChange}
+      />
       <TodoTable user={user} filters={filters} onEdit={handleEditTodo} />
     </div>
   );

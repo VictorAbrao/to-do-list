@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import UserList from './UserList'; // Ajuste o caminho de importação conforme necessário
+import '@testing-library/jest-dom/extend-expect'; // Add this line
+import UserList from '../../components/UserList';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faCircle); // Adicione o ícone necessário ao conjunto de ícones
+library.add(faCircle);
 
 describe('UserList Component', () => {
   it('should render online and offline users correctly', () => {

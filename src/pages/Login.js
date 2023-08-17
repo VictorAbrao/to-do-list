@@ -3,7 +3,8 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useHistory } from "react-router-dom";
 import { initializeApp } from "firebase/app";
 import { getFirestore, getDoc, doc, setDoc } from "firebase/firestore";
-import './Login.css'
+import '../assets/styles/pages/Login.css';
+
 const firebaseConfig = {
   apiKey: "AIzaSyDrB5Cj-3EI8kwbcu6H8ihOeS84OXok1LY",
   authDomain: "to-do-list-va.firebaseapp.com",
@@ -13,6 +14,7 @@ const firebaseConfig = {
   appId: "1:366381761381:web:980512c4429ddf2da0978c",
   measurementId: "G-V0H21J4LY3",
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -54,7 +56,7 @@ const handleGoogleAuth = () => {
   return (
     <div className="divLogin">
       <br />
-      <h1>To do list squad 1</h1>
+      <h1>To do list</h1>
       <br />
       <div className="google-btn" onClick={handleGoogleAuth}>
         <div className="google-icon-wrapper">

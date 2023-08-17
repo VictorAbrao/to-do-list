@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import './NavBar.css';
+import '../assets/styles/components/NavBar.css';
 const Navbar = ({ user, handleSignOut }) => {
   const firstName = user?.displayName?.split(' ')[0];
 

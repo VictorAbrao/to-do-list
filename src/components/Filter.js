@@ -1,9 +1,10 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import '../assets/styles/components/Filter.css'
 
 function Filter({ onFilterChange, users }) {
   return (
-    <div className="container my-3">
+    <div className="container my-3 divFilter">
       <form className="row">
         <div className="col form-group">
           <label htmlFor="description" className="mr-1">

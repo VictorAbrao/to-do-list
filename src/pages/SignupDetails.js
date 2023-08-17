@@ -32,7 +32,7 @@ function SignupDetails() {
         google_id: user.uid, // Salvando o ID do Google
         first_name: firstName,
         last_name: lastName,
-        online:true,
+        online: true,
         phone_number: phoneNumber,
       });
 

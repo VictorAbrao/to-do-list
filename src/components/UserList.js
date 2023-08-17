@@ -1,13 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import './UserList.css'
+import "../assets/styles/components/UserList.css";
+
 const UserList = ({ onlineUsers, offlineUsers }) => (
   <div className="userList">
-  
     <h4>User list </h4>
     <ul className="listUsersOffline">
-{onlineUsers.map((user) => (
+      {onlineUsers.map((user) => (
         <li key={user.google_id}>
           <FontAwesomeIcon className="iconOnline" icon={faCircle} />{" "}
           {user.first_name + " " + user.last_name}

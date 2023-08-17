@@ -1,7 +1,7 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import Filter from "./Filter"; // Ajuste o caminho de importação conforme necessário
-
+import Filter from "../../components/Filter";
+import '@testing-library/jest-dom/extend-expect';
 describe("Filter", () => {
   const users = [
     { google_id: "123", first_name: "John", last_name: "Doe" },
@@ -16,7 +16,6 @@ describe("Filter", () => {
     );
 
     expect(getByLabelText("Description:")).toBeInTheDocument();
-    // Utilize getByTestId com um atributo data-testid que deve ser adicionado no componente
     expect(getByTestId("responsible-select")).toBeInTheDocument();
     expect(getByLabelText("Date:")).toBeInTheDocument();
     expect(getByLabelText("State:")).toBeInTheDocument();
@@ -36,5 +35,4 @@ describe("Filter", () => {
     );
   });
 
-  // Você pode adicionar testes semelhantes para outros campos, se necessário
 });

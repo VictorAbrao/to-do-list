@@ -8,7 +8,7 @@ import {
   faUnlock,
   faPen,
 } from "@fortawesome/free-solid-svg-icons"; // Importando o ícone da seta para esquerda
-import "./TodoItem.css";
+import "../assets/styles/components/TodoItem.css";
 
 function TodoItem({
   todo,

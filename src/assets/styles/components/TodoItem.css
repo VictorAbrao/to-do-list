@@ -2,6 +2,10 @@
   margin-right: 10px; /* Ajuste o valor conforme o espaço desejado */
 }
 
-.iconAction{
-color:white;
+.divActions {
+  width: 207px;
+}
+
+.iconAction {
+  color: white;
 }

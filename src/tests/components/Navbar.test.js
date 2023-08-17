@@ -1,10 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Navbar from './Navbar'; // Ajuste o caminho se necessário
+import Navbar from '../../components/Navbar';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-
-// Adiciona o ícone à biblioteca para que ele possa ser renderizado nos testes
+import '@testing-library/jest-dom/extend-expect';
 library.add(faSignOutAlt);
 
 describe('Navbar', () => {

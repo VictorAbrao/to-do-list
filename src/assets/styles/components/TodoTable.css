@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+  /* Pode ajustar o valor dependendo do seu breakpoint para dispositivos móveis */
+  .tableToDo {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tableToDo::-webkit-scrollbar {
+    height: 8px; /* Ajuste conforme necessário */
+  }
+
+  .tableToDo::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5); /* Cor da barra */
+    border-radius: 4px; /* Arredondamento das bordas */
+  }
+
+  .tableToDo::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Cor de fundo da trilha */
+  }
+}

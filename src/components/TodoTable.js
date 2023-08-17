@@ -1,12 +1,9 @@
 import React from "react";
-import TodoItem from "../components/TodoItem";
+import TodoItem from "./TodoItem";
 import { useFirestoreTodos } from "../hooks/useFirestoreTodos";
+import '../assets/styles/components/TodoTable.css'
 
-const TodoTable = ({
-  user,
-  onEdit,
-  filters,
-}) => {
+const TodoTable = ({ user, onEdit, filters }) => {
   const { todos, deleteTodo, updateState, revertState, unlockTodo, lockTodo } =
     useFirestoreTodos(user);
 
@@ -21,7 +18,7 @@ const TodoTable = ({
   });
 
   return (
-    <table className="table">
+    <table className="table tableToDo">
       <thead>
         <tr>
           <th>Description</th>
@@ -35,7 +32,7 @@ const TodoTable = ({
       </thead>
       <tbody>
         {filteredTodos.map((todo) => (
-      <TodoItem
+          <TodoItem
             key={todo.id}
             todo={todo}
             loggedInGoogleId={user?.uid}
